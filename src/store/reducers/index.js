@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 export default combineReducers({
-    // Placing all of the reducers in he'ya
-})
+  // Placing all of the reducers in he'ya
+});

@@ -1,4 +1,4 @@
-import axios from axios;
+export * from "./loginAction";
 
 
 // Inside here we'll have our calls to the reducer for each state of the call i.G

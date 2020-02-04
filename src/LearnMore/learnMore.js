@@ -18,7 +18,7 @@ import Link from "@material-ui/core/Link";
 const Data = {
   team: [
     {
-      name: "",
+      name: "Zach Young",
       bio: "`",
       role: "",
       lastBook: " ",
@@ -29,7 +29,7 @@ const Data = {
       img_url: ""
     },
     {
-      name: "",
+      name: "Jeff Butler",
       bio: "`",
       role: "",
       lastBook: " ",
@@ -40,7 +40,7 @@ const Data = {
       img_url: ""
     },
     {
-      name: "",
+      name: "Eli Citron",
       bio: "`",
       role: "",
       lastBook: " ",
@@ -48,17 +48,17 @@ const Data = {
       portfolioLink: "",
       linkedInLink: "",
       gitHubLink: "",
-      img_url: ""
+      img_url: "http://localhost:3000/static/media/eli.5e774496.jpeg"
     },
     {
-      name: "",
-      bio: "`",
-      role: "",
-      lastBook: " ",
-      secretTalent: "",
-      portfolioLink: "",
-      linkedInLink: "",
-      gitHubLink: "",
+      name: "Colin de Vries",
+      bio: "Full Stack Developer, Front End Fanboy",
+      role: "Full Stack Developer",
+      lastBook: "What's a book?",
+      secretTalent: "Can eat a whole party-size bag of Doritos",
+      portfolioLink: "https://www.colindevries.dev/",
+      linkedInLink: "https://www.linkedin.com/in/dvcolin/",
+      gitHubLink: "https://github.com/dvcolin",
       img_url: ""
     },
     {
@@ -80,7 +80,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright ©"}
       <Link color="inherit" href="https://material-ui.com/">
-        www.MemeFlyAi.com
+        www.Testsite.com
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

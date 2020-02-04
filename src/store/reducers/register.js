@@ -1,40 +1,33 @@
-// import all of the login actions from ../actions';
+// import all of the registration actions from ../actions';
 
 //set initial state
-const loginState = {
+const regState = {
     isLoading: false,
-    isLoggedIn: false,
+    isRegistered: false,
     error: {}
 }
 
 
-export const loginReducer = (state = loginState, { type, payload }) => {
+export const regReducer = (state = regState, { type, payload }) => {
   switch (type) {
-    case IS_LOGGING_IN:
+    case IS_REGESTERED:
       return {
         ...state,
         isLoading: true
       };
 
-    case LOGIN_SUCCESS:
+    case REG_SUCCESS:
       return {
         ...state,
         isLoading: false,
-        isLoggedIn: true,
+        isRegistered: true,
         error: {}
       };
-    case LOGIN_ERROR:
+    case REG_ERROR:
       return {
         ...state,
         isLoading: false,
         error: payload
-      };
-
-    case LOGOUT:
-      return {
-        ...state,
-
-        isLoggedIn: false
       };
     default:
       return state;
