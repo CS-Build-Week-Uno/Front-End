@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
 const Login = props => {
   const [user, setUser] = useState({ username: "", password: "" });
 
@@ -11,8 +13,19 @@ const Login = props => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.history.push("/dashboard");
-  }
+    props.history.push("/dashboard"); //this will go into your .then 
+    axios
+    .post(`http://csbuildweek1.herokuapp.com/api/login`, {
+      username: user.username,      
+      password: user.password,
+  })
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+};
 
   return (
     <>

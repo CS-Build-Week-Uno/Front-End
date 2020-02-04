@@ -2,9 +2,9 @@ import React from "react";
 
 import styled from "styled-components";
 
-const GameView = () => {
+const GameMap = () => {
   return null;
   //in here we will put the actual map
 };
 
-export default GameView;
+export default GameMap;

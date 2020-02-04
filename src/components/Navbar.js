@@ -37,6 +37,7 @@ const Navbar = () => {
       <span>Don't Die!</span>
       <NavItems>
         <NavLink to="/">Home</NavLink>
+        <NavLink to="/learnmore">About</NavLink>
         <NavLink to="/signup">Signup</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/dashboard">Play</NavLink>
