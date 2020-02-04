@@ -1,20 +1,43 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-//import styled from 'styled-components';
+import {NavLink as Link} from 'react-router-dom';
+import styled from 'styled-components';
 
+const NavWrapper = styled.div`
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content;
+  font-weight: 600;
+`;
+
+const NavItems = styled.ul`
+  margin-left: auto;
+  list-style: none;
+  margin-top: 0;
+`;
+
+const StyledLink = styled(Link)`
+    margin-right: 1rem;
+    text-decoration: none;
+`;
+
+const NavLink = ({to, children}) => (
+  <StyledLink to={to} activeStyle={{
+    color: 'red'
+  }}>{children}</StyledLink>
+)
 
 
 const Navbar = () => {
     return (
-      <div className='nav-wrapper'>
+      <NavWrapper>
           <span>Don't Die!</span>
-          <ul className='nav-items'>
-              <Link to='/' classNam="navLink">Login</Link>
-              <Link to='/register' classNam="navLink">Registration</Link>
-              <Link to= '/home' classNam="navLink">Home</Link>
-              <Link to='/dashboard' classNam="navLink" >Don't Die!</Link>
-          </ul>
-      </div>
+          <NavItems>
+              <NavLink to='/'>Login</NavLink>
+              <NavLink to='/register'>Registration</NavLink>
+              <NavLink to= '/home'>Home</NavLink>
+              <NavLink to='/dashboard' >Don't Die!</NavLink>
+          </NavItems>
+      </NavWrapper>
     );
   };
   
