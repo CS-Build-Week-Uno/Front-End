@@ -1,12 +1,18 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+//import styled from 'styled-components';
+
+
+
 const Navbar = () => {
     return (
       <div className='nav-wrapper'>
-          <span>App name goes here</span>
+          <span>Don't Die!</span>
           <ul className='nav-items'>
-              <li>Home</li>
-              <li>Game</li>
-              <li>Login/Logout</li>
+              <Link to='/' classNam="navLink">Login</Link>
+              <Link to='/register' classNam="navLink">Registration</Link>
+              <Link to= '/home' classNam="navLink">Home</Link>
+              <Link to='/dashboard' classNam="navLink" >Don't Die!</Link>
           </ul>
       </div>
     );
