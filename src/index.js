@@ -7,16 +7,18 @@ import * as serviceWorker from "./serviceWorker";
 
 import { createStore, applyMiddleware } from "redux";
 import { logger } from "redux-logger";
-import { provider } from "react-redux";
+import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import combineReducers from "./store/reducers";
 
-const store = createStore(combineReducers, applyMiddleware());
+import store from "./store/reducers/index"
 
 ReactDOM.render(
-  <Router store={store}>
+  <Provider store={store} >
+  <Router >
     <App />
-  </Router>,
+  </Router>
+  </Provider>,
   document.getElementById("root")
 );
 

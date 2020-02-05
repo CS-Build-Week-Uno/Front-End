@@ -3,8 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import { login } from "../store/actions"
+
 const Login = props => {
   const [user, setUser] = useState({ username: "", password: "" });
+
 
   function handleChange(e) {
     const updatedUser = { ...user, [e.target.name]: e.target.value };
@@ -14,7 +17,7 @@ const Login = props => {
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .post(`http://csbuildweek1.herokuapp.com/api/login`, {
+      .post(`https://csbuildweek1.herokuapp.com/api/login`, {
         username: user.username,
         password: user.password
       })
@@ -25,6 +28,12 @@ const Login = props => {
       .catch(function(error) {
         console.log(error);
       });
+
+    // login(dispatch, user).then(res => {
+    //   if(res){
+    //     props.history.push("/dashbaord")
+    //   }
+    // });
   }
 
   return (
