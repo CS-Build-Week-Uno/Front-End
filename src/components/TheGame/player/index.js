@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import bounceSprite from './bounceSprite.png'
 import {connect} from 'react-redux'
+import handleMovement from './move'
 
 function Player(props) {
 	return (
@@ -24,4 +25,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps) (Player);
+export default connect(mapStateToProps) (handleMovement(Player));
