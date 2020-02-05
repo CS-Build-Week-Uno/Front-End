@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import bounceMove from './BounceMove.gif'
+import bounceMove from './BounceMoveClear.gif'
 import {connect} from 'react-redux'
 import handleMovement from './move'
 
