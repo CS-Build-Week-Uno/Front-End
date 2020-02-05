@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import handleMovement from './move'
 
 function Player(props) {
+	console.log("PROPS!!: ", props);
 	return (
 		<div
 			style={{
@@ -26,4 +27,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps) (handleMovement(Player));
+
+export default connect(mapStateToProps, {handleMovement})(Player);

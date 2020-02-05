@@ -1,15 +1,21 @@
 //Import all of the actions
 import { MOVE_PLAYER, MOVE_SUCCESS, MOVE_ERROR } from "../actions/playerAction";
 
-const initialState = {};
+const gameState = {
+    isLoading: false,
+    location:{uuid:"", name:"", title:"",  description: "", players:[]},
+    position: [0,0],
+    responseLog: [],
+    error:{}
+}
 
 //rename actionLog/responseLog in accordance to the rest of project
 
-const playerReducer = (state = initialState, action) => {
-  switch (action.type) {
+const playerReducer = (state = gameState, { type, payload }) => {
+  switch (type) {
     case "MOVE_PLAYER":
       return {
-        ...action.payload
+        ...payload
         //returns the direction
       };
     case "MOVE_SUCCESS":

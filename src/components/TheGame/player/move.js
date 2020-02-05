@@ -1,6 +1,6 @@
 import store from "../../../store/reducers/index"
 import { SIZE_OF_SPRITE } from '../../../store/constantValues'
-
+import {move} from '../../../store/actions/playerAction';
 export default function handleMove(player) {
 
     // Handles changing the position based on old position & shifting
@@ -26,20 +26,7 @@ export default function handleMove(player) {
         }
         
     }
-    
-    // Handles the Dispatch for Move, This could be refactored into Actions
-    function dispatchMove(direction){
 
-        store.dispatch({
-            // Calls Dispatch Type MOVE_PLAYER
-            type:'MOVE_PLAYER',
-            // Uploads the Player Positiong in PlayerRepository with the direction from getNewPosition
-            payload: {
-                position: getNewPosition(direction)
-            }
-        })
-    }
-    
     function handleKeyDown(e) {
         // Preventing page from scrolling up and down when you press the arrow keys
         e.preventDefault()
@@ -49,16 +36,16 @@ export default function handleMove(player) {
 
             // Left Arrow Key, returning the function to stop the switch case
             case 37:
-                return dispatchMove('West')
+                return move('West')
             // Up Arrow Key, returning the function to stop the switch case
             case 38:
-                return dispatchMove("North")
+                return move("North")
             // Right Arrow Key, returning the function to stop the switch case
             case 39:
-                return dispatchMove("East")
+                return move("East")
             // Down Arrow Key, returning the function to stop the switch case
             case 40:
-                return dispatchMove("South")
+                return move("South")
             //Otherwise console log what key you're pressing 
             default:
                 console.log(e.keyCode)
@@ -67,9 +54,10 @@ export default function handleMove(player) {
 
 
     // Listening to user key downstrokes
-    // window.addEventListener('keydown', (e) => {
-    //     handleKeyDown(e)
-    // })
+     window.addEventListener('keydown', (e) => {
+         handleKeyDown(e)
+         console.log("keydown", e)
+     })
 
 
     return player

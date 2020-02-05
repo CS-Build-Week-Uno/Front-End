@@ -16,4 +16,3 @@ export const move = (dispatch, direction) => {
       dispatch({ type: MOVE_ERROR, payload: err.response.data });
     });
 };
-//Problem: We need to send a post call to move on the back end

@@ -26,7 +26,7 @@ export const login = (dispatch, user) => {
 export const logout = (dispatch) => {
     localStorage.removeItem('token')
     dispatch({type: LOGOUT})
-
+}
 
 
 // dispatch action here for logout
