@@ -66,11 +66,22 @@ export default function handleMove(player) {
     }
 
 
+    // const gamer = document.getElementsByClassName('gameWrapper')
     // Listening to user key downstrokes
+    
+    // 
+    // document.querySelector(".gameWrapper").addEventListener('keydown', (e) => {
+    //     handleKeyDown(e)
+    // })
+
+  
     window.addEventListener('keydown', (e) => {
         handleKeyDown(e)
     })
 
+    //     if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40  ){
+    //     handleKeyDown(e)}
+    // })
 
     return player
 }

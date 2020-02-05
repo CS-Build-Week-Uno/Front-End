@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Game />
+   <Game />
       
       <Switch>
         <Route exact path="/" component={Landing} />
