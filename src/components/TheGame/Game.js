@@ -6,24 +6,28 @@ import ChatBox from "./ChatBox";
 import Player from "./player"
 
 const Game = () => {
-  return (
-    <div
-      style={{
-        position:'relative',
-        width:'800px',
-        height:'400px',
-        margin:'2% auto',
-      }}
-    >
-      <Player />
-      <GameMap />
+	return (
+		<>
+    {/* Wrapper containing Map & Char */}
+			<div
+				style={{
+					position: "relative",
+					width: "800px",
+					height: "400px",
+					margin: "2% auto"
+				}}
+			>
+				<Player />
+				<GameMap />
+			</div>
 
-      
-      <Controller />
-      <ChatBox />
-      <ResponseBox />
-    </div>
-  );
+			<div>
+				<Controller />
+				<ChatBox />
+				<ResponseBox />
+			</div>
+		</>
+	);
 };
 
 export default Game;
