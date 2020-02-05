@@ -7,38 +7,38 @@ import jeff from "../assets/jeff.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const team = [
-  {
-    name: "Colin de Vries",
-    github: "https://github.com/dvcolin",
-    linkedin: "https://www.linkedin.com/",
-    photo: colin
-  },
-  {
-    name: "Eli Citron",
-    github: "https://github.com/ebcitron",
-    linkedin: "https://www.linkedin.com/",
-    photo: eli
-  },
-  {
-    name: "Derek Etman",
-    github: "https://github.com/DerekEtman",
-    linkedin: "https://linkedin.com/",
-    photo: derek
-  },
-  {
-    name: "Jeff Butler",
-    github: "https://github.com/jeffbutlerspringdale",
-    linkedin: "https://linkedin.com/",
-    photo: jeff
-  },
-  {
-    name: "Zach Young",
-    github: "https://github.com/zachtyoung",
-    linkedin: "https://linkedin.com/",
-    photo: zach
-  }
-];
+// const team = [
+//   {
+//     name: "Colin de Vries",
+//     github: "https://github.com/dvcolin",
+//     linkedin: "https://www.linkedin.com/",
+//     photo: colin
+//   },
+//   {
+//     name: "Eli Citron",
+//     github: "https://github.com/ebcitron",
+//     linkedin: "https://www.linkedin.com/",
+//     photo: eli
+//   },
+//   {
+//     name: "Derek Etman",
+//     github: "https://github.com/DerekEtman",
+//     linkedin: "https://linkedin.com/",
+//     photo: derek
+//   },
+//   {
+//     name: "Jeff Butler",
+//     github: "https://github.com/jeffbutlerspringdale",
+//     linkedin: "https://linkedin.com/",
+//     photo: jeff
+//   },
+//   {
+//     name: "Zach Young",
+//     github: "https://github.com/zachtyoung",
+//     linkedin: "https://linkedin.com/",
+//     photo: zach
+//   }
+// ];
 const Landing = () => {
   return (
     <>
@@ -49,7 +49,7 @@ const Landing = () => {
         usual. Take a second to enjoy this beauty becuase we worked hard on it.
         Okay... we worked on it.{" "}
       </h3>
-      <h1>Our Team</h1>
+      {/* <h1>Our Team</h1>
       <div className="team-wrapper">
         {team.map(el => (
           <div>
@@ -63,7 +63,7 @@ const Landing = () => {
             </a>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

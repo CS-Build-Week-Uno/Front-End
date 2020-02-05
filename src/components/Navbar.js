@@ -38,9 +38,10 @@ const Navbar = () => {
       <NavItems>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/learnmore">About</NavLink>
-        <NavLink to="/signup">Signup</NavLink>
-        <NavLink to="/login">Login</NavLink>
+        {localStorage.getItem("token")? "":<NavLink to="/login">Login</NavLink>} 
         <NavLink to="/dashboard">Play</NavLink>
+        {localStorage.getItem("token")? <NavLink to="/" onClick={localStorage.removeItem("token")}>Logout</NavLink>:<NavLink to="/signup">Signup</NavLink>}
+        
       </NavItems>
     </NavWrapper>
   );

@@ -3,11 +3,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import { login } from "../store/actions"
+import { login } from "../store/actions";
 
 const Login = props => {
   const [user, setUser] = useState({ username: "", password: "" });
-
 
   function handleChange(e) {
     const updatedUser = { ...user, [e.target.name]: e.target.value };
@@ -23,6 +22,7 @@ const Login = props => {
       })
       .then(function(response) {
         console.log(response);
+        localStorage.setItem("token", response.data.key);
         props.history.push("/dashboard");
       })
       .catch(function(error) {

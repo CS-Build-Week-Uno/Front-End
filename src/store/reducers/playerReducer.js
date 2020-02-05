@@ -1,18 +1,44 @@
-const initialState = {
-    position: [0, 0],
+//Import all of the actions
+import { MOVE_PLAYER, MOVE_SUCCESS, MOVE_ERROR } from "../actions/playerAction";
 
-}
+const initialState = {};
 
+//rename actionLog/responseLog in accordance to the rest of project
 
 const playerReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case 'MOVE_PLAYER':
-            return{
-                ...action.payload
-            }
-        default:
-            return state
-    }
-}
+  switch (action.type) {
+    case "MOVE_PLAYER":
+      return {
+        ...action.payload
+        //returns the direction
+      };
+    case "MOVE_SUCCESS":
+      return {
+        ...state,
+        isLoading: false,
+        location: { ...state.location, ...payload },
+        responseLog:
+          payload.description !==
+          state.responseLog[state.responseLog.length - 1].description
+            ? [
+                ...state.responseLog,
+                { title: payload.title, description: payload.description }
+              ]
+            : state.responseLog
+      };
+    case "MOVE_ERROR":
+      return {
+        ...state,
+        error: payload,
+        responseLog: [
+          ...state.responseLog,
+          { title: payload.title, description: payload.description }
+        ]
+      };
 
-export default playerReducer
+    default:
+      return state;
+  }
+};
+
+export default playerReducer;

@@ -8,8 +8,7 @@ import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import { LearnMore } from "./components/LearnMore/learnMore";
-import Player from "./components/TheGame/player/index"
-import Game from "./components/TheGame/Game";
+import Player from "./components/TheGame/player/index";
 
 
 function App() {
@@ -17,8 +16,7 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Game />
-      
+
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/login" component={Login} />

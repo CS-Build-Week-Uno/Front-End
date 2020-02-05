@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const SignUp = () => {
+const SignUp = (props) => {
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -12,7 +12,7 @@ const SignUp = () => {
   });
 
   const handleChange = event => {
-    event.preventDefault();
+ 
     setUser({ ...user, [event.target.name]: event.target.value });
     console.log(user);
   };
@@ -21,10 +21,12 @@ const SignUp = () => {
     event.preventDefault();
     axios
       .post(`http://csbuildweek1.herokuapp.com/api/registration/`, user)
-      .then(function(response) {
+      .then(response => {
         console.log(response);
+        localStorage.setItem("token", response.data.key);
+        props.history.push("/dashboard");
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log(error);
       });
   };

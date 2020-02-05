@@ -19,29 +19,29 @@ const Data = {
   team: [
     {
       name: "Zach Young",
-      bio: "`",
+      bio: "Full Stack Software Developer",
       role: "",
       lastBook: " ",
       secretTalent: "",
       portfolioLink: "",
       linkedInLink: "",
       gitHubLink: "",
-      img_url: ""
+      img_url: "https://ca.slack-edge.com/T4JUEB3ME-UK2JMNK38-499199ce68ec-192"
     },
     {
       name: "Jeff Butler",
-      bio: "`",
+      bio: "Full Stack Developer",
       role: "",
       lastBook: " ",
       secretTalent: "",
       portfolioLink: "",
       linkedInLink: "",
       gitHubLink: "",
-      img_url: ""
+      img_url: "https://ca.slack-edge.com/T4JUEB3ME-UJ2DT9KHD-f4fe13e00261-512"
     },
     {
       name: "Eli Citron",
-      bio: "`",
+      bio: "Full Stack Developer",
       role: "",
       lastBook: " ",
       secretTalent: "",
@@ -59,7 +59,7 @@ const Data = {
       portfolioLink: "https://www.colindevries.dev/",
       linkedInLink: "https://www.linkedin.com/in/dvcolin/",
       gitHubLink: "https://github.com/dvcolin",
-      img_url: ""
+      img_url: "https://ca.slack-edge.com/T4JUEB3ME-UH1HZ46H3-f68576ae20c9-512"
     },
     {
       name: "Derek Etman",

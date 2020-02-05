@@ -17,6 +17,7 @@ const initialState = {
   gameState: {
     isLoading: false,
     location:{uuid:"", name:"", title:"",  description: "", players:[]},
+    responseLog: [],
     error:{}
   }
 };

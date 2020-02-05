@@ -1,7 +1,8 @@
 import React from "react";
+import Game from "./TheGame/Game";
 const Dashboard = () => {
     return (
-      <h1>Dashboard Page</h1>
+      <Game/>
     );
   };
   

@@ -67,9 +67,9 @@ export default function handleMove(player) {
 
 
     // Listening to user key downstrokes
-    window.addEventListener('keydown', (e) => {
-        handleKeyDown(e)
-    })
+    // window.addEventListener('keydown', (e) => {
+    //     handleKeyDown(e)
+    // })
 
 
     return player
