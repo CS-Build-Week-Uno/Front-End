@@ -21,6 +21,7 @@ function Player(props) {
 
 function mapStateToProps(state) {
     return{
+        // Spreading in all state for player, cause I'm lazy.
         ...state.player,
     }
 }
