@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import bounceSprite from './bounceSprite.png'
+import bounceMove from './BounceMoveClear.gif'
 import {connect} from 'react-redux'
 import handleMovement from './move'
 
@@ -10,7 +10,7 @@ function Player(props) {
 				position: "absolute",
 				top: props.position[1],
 				left: props.position[0],
-                backgroundImage: `url(${bounceSprite})`,
+                backgroundImage: `url(${bounceMove})`,
                 backgroundPosition: '0 0',
                 width: '30px',
                 height:'30px',

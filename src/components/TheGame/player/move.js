@@ -1,5 +1,5 @@
 import store from "../../../store/reducers/index"
-import { SIZE_OF_SPRITE } from '../../../store/constantValues'
+import { SIZE_OF_SPRITE, HEIGHT_OF_MAP, WIDTH_OF_MAP } from '../../../store/constantValues'
 
 export default function handleMove(player) {
 
@@ -27,10 +27,17 @@ export default function handleMove(player) {
         
     }
     
-    // Handles the Dispatch for Move, This could be refactored into Actions
-    function dispatchMove(direction){
+    
+        function observeBoundaries(oldPos, newPos) {
+            
+            return (newPos[0] >= 0 && newPos <= WIDTH_OF_MAP) && (newPos[1] >= 0 && newPos[1 <= HEIGHT_OF_MAP]) ? newPos : oldPos
+            }
+        }
+        // Handles the Dispatch for Move, This could be refactored into Actions
+        function dispatchMove(direction){
+            const oldPos = store.getState().player.position
 
-        store.dispatch({
+            store.dispatch({
             // Calls Dispatch Type MOVE_PLAYER
             type:'MOVE_PLAYER',
             // Uploads the Player Positiong in PlayerRepository with the direction from getNewPosition
@@ -66,11 +73,22 @@ export default function handleMove(player) {
     }
 
 
+    // const gamer = document.getElementsByClassName('gameWrapper')
     // Listening to user key downstrokes
+    
+    // 
+    // document.querySelector(".gameWrapper").addEventListener('keydown', (e) => {
+    //     handleKeyDown(e)
+    // })
+
+  
     window.addEventListener('keydown', (e) => {
         handleKeyDown(e)
     })
 
+    //     if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40  ){
+    //     handleKeyDown(e)}
+    // })
 
     return player
 }
