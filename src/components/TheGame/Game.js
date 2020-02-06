@@ -3,7 +3,8 @@ import Controller from "./Controller";
 import ResponseBox from "./ResponseBox";
 import GameMap from "./map";
 import ChatBox from "./ChatBox";
-import Player from "./player"
+import Player from "./player";
+
 
 const Game = () => {
 	return (

@@ -14,6 +14,7 @@ const gameState = {
 const playerReducer = (state = gameState, { type, payload }) => {
   switch (type) {
     case "MOVE_PLAYER":
+      console.log("Move Player Payload: ", payload);
       return {
         ...payload
         //returns the direction
