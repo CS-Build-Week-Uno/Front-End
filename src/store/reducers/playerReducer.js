@@ -8,7 +8,7 @@ const gameState = {
     responseLog: [],
     error:{}
 }
-
+// use await to wait for state to finish updating, than check if key if up or down (y) or left or right(x), if so increment and decrement accordingly
 //rename actionLog/responseLog in accordance to the rest of project
 
 const playerReducer = (state = gameState, { type, payload }) => {
