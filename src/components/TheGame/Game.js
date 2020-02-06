@@ -13,9 +13,11 @@ const Game = () => {
 				className="gameWrapper"
 				style={{
 					position: "relative",
-					width: "800px",
-					height: "400px",
-					margin: "2% auto"
+					width: "600px",
+					height: "300px",
+					margin: "2% auto",
+					color:'green',
+					
 				}}
 			>
 				<Player />

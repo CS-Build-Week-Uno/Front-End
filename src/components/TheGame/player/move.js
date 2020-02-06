@@ -28,21 +28,25 @@ export default function handleMove(player) {
     }
     
     
-        function observeBoundaries(oldPos, newPos) {
-            
-            return (newPos[0] >= 0 && newPos <= WIDTH_OF_MAP) && (newPos[1] >= 0 && newPos[1 <= HEIGHT_OF_MAP]) ? newPos : oldPos
-            }
-        }
-        // Handles the Dispatch for Move, This could be refactored into Actions
-        function dispatchMove(direction){
-            const oldPos = store.getState().player.position
+    function observeBoundaries(oldPos, newPos) {
+        return (newPos[0] >= 0 && newPos[0] <= WIDTH_OF_MAP - SIZE_OF_SPRITE) && 
+        (newPos[1] >= 0 && newPos[1] <= HEIGHT_OF_MAP - SIZE_OF_SPRITE) ? newPos : oldPos
+    }
+    
 
-            store.dispatch({
+    // Handles the Dispatch for Move, This could be refactored into Actions
+    function dispatchMove(direction){
+        const oldPos = store.getState().player.position
+
+        console.log("oldPos: ",oldPos)
+
+        store.dispatch({
             // Calls Dispatch Type MOVE_PLAYER
             type:'MOVE_PLAYER',
+            
             // Uploads the Player Positiong in PlayerRepository with the direction from getNewPosition
             payload: {
-                position: getNewPosition(direction)
+                position: observeBoundaries(oldPos, getNewPosition(direction))
             }
         })
     }
@@ -73,22 +77,11 @@ export default function handleMove(player) {
     }
 
 
-    // const gamer = document.getElementsByClassName('gameWrapper')
     // Listening to user key downstrokes
-    
-    // 
-    // document.querySelector(".gameWrapper").addEventListener('keydown', (e) => {
-    //     handleKeyDown(e)
-    // })
-
   
     window.addEventListener('keydown', (e) => {
         handleKeyDown(e)
     })
-
-    //     if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40  ){
-    //     handleKeyDown(e)}
-    // })
 
     return player
 }
