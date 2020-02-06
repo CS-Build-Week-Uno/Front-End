@@ -13,7 +13,8 @@ function Player(props) {
                 backgroundImage: `url(${bounceMove})`,
                 backgroundPosition: '0 0',
                 width: '30px',
-                height:'30px',
+				height:'30px',
+				border:'1px solid white'
 			}}
 		/>
 	);

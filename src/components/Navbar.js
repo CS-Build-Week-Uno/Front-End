@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../assets/Dont_Die_Title.png"
 
 const NavWrapper = styled.div`
   display: grid;
@@ -13,12 +14,14 @@ const NavItems = styled.ul`
   margin-left: auto;
   list-style: none;
   margin-top: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size:.7rem;
 `;
 
 const StyledLink = styled(Link)`
   margin-right: 1rem;
   text-decoration: none;
-`;
+  `;
 
 const NavLink = ({ to, children }) => (
   <StyledLink
@@ -34,7 +37,7 @@ const NavLink = ({ to, children }) => (
 const Navbar = () => {
   return (
     <NavWrapper>
-      <span>Don't Die!</span>
+      <a> <img className="Logo" style={{width:"55%"}} src={logo}/> </a>
       <NavItems>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/learnmore">About</NavLink>
