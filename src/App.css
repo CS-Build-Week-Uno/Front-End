@@ -3,7 +3,10 @@
 :root{
   font-family: 'Press Start 2P', cursive;
 }
-
+h3{
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6em;
+}
 .App{
   margin: 50px 100px;
 }
@@ -58,4 +61,15 @@ span{
   max-width: 225px;
   margin-top: 25px;
   text-align: center;
+}
+.play{
+  font-family: 'Press Start 2P', cursive;
+  border: 3px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  background-color: red;
+  margin: 0 auto;
+  width: max-content;
+  display: block;
 }
