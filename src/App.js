@@ -22,8 +22,12 @@ import Game from "./components/TheGame/Game";
 function App() {
   return (
 
+
       <div className="App">
       <Navbar />      
+
+   {/* <Game /> */}
+      
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/login" component={Login} />

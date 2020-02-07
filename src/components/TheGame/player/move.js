@@ -1,11 +1,16 @@
 import {useDispatch} from 'react-redux'
 import store from "../../../store/reducers/index"
-import { SIZE_OF_SPRITE } from '../../../store/constantValues'
+
+
 import {moveAction} from '../../../store/actions/playerAction';
+
+import { SIZE_OF_SPRITE, HEIGHT_OF_MAP, WIDTH_OF_MAP } from '../../../store/constantValues'
+
 
 //const dispatch = useDispatch()
 export default function handleMove(player) {
     
+
         // Handles changing the position based on old position & shifting
         // function getNewPosition(direction){
         //         // Retrieving previous player position from state
@@ -41,6 +46,7 @@ export default function handleMove(player) {
             // payload: {
             //     position: getNewPosition(direction)
             // }
+
         })
     }
     
@@ -71,10 +77,10 @@ export default function handleMove(player) {
 
 
     // Listening to user key downstrokes
+  
     window.addEventListener('keydown', (e) => {
         handleKeyDown(e)
     })
-
 
     return player
 }

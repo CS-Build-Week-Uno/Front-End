@@ -13,6 +13,7 @@ const Dashboard = () => {
         </TerminalStyles>
       </Container>
       );
+
   };
   
   const Container = styled.div`

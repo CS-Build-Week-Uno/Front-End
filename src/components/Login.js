@@ -50,11 +50,12 @@ const Login = props => {
           value={user.password}
           onChange={handleChange}
         />
-        <button>Login</button>
-      </form>
-      <span>
+        <button className="submit">Login</button>
+        <span>
         Don't have an account yet? <Link to="/signup">Sign Up</Link>
       </span>
+      </form>
+
     </>
   );
 };
