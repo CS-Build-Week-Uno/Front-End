@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
-import {useStateValue} from "../../utils/hooks/useStateValue";
-import {getLocation} from "../../store/actions/gameAction";
+// import {useStateValue} from "../../utils/hooks/useStateValue";
+// import {getLocation} from "../../store/actions/gameAction";
 
 
 export const Container = styled.div`
@@ -36,12 +36,12 @@ color: blue;
 
 
 const ActionLog = () => {
-const [{gameState}, dispatch] = useStateValue();
+//const [{gameState}, dispatch] = useStateValue();
 
-  console.log("GAMESTATE: ", gameState, "DISPATCH: ", dispatch);
-  useEffect(()=> {
-    getLocation(dispatch);
-  }, [dispatch]);
+  //console.log("GAMESTATE: ", gameState, "DISPATCH: ", dispatch);
+  // useEffect(()=> {
+  //   getLocation(dispatch);
+  // }, [dispatch]);
 
     return(
       <Container>

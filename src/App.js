@@ -15,13 +15,13 @@ import Player from "./components/TheGame/player/index"
 import Game from "./components/TheGame/Game";
 
 
-import initialState from "./store/reducers/initialState";
+// import initialState from "./store/reducers/initialState";
 
-import {rootReducer} from "./store/reducers";
+// import {rootReducer} from "./store/reducers";
 
 function App() {
   return (
-    <StateProvider initialState={initialState} reducer={rootReducer}>
+
       <div className="App">
       <Navbar />      
       <Switch>
@@ -32,7 +32,7 @@ function App() {
         <Route path="/dashboard" component={Dashboard} />
       </Switch>
         </div>
-    </StateProvider>
+ 
   );
 }
 

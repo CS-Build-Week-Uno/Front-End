@@ -28,7 +28,7 @@ export const Log = styled.div`
 `;
 
 const ChatBox = () => {
-  const [{ gameState }, dispatch] = useStateValue();
+ // const [{ gameState }, dispatch] = useStateValue();
   return (
     <Container>
       <Title>Pusher ChatBox</Title>
