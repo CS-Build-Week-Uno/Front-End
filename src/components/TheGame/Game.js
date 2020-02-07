@@ -5,9 +5,10 @@ import GameMap from "./map";
 import ChatBox from "./ChatBox";
 import Player from "./player";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
-import {tiles} from "../../data/maps/1"
+import {tiles} from "../../data/maps/1";
+import {connect} from 'react-redux';
 
 const MapContainer = styled.div`
 width:640px;
@@ -20,7 +21,7 @@ grid-rows: 1/6;
 `
 
 
-const Game = () => {
+const Game = (props) => {
 	return (
 		<>
 			{/* Wrapper containing Map & Char */}
@@ -35,7 +36,7 @@ const Game = () => {
 				}}
 			>
 				<Player />
-				<GameMap tiles ={tiles}/>
+				<GameMap tiles ={tiles} playerPosition={props.playerPosition}/>
 			</MapContainer>
 
 			<div>
@@ -47,5 +48,9 @@ const Game = () => {
 	);
 
 };
+
+const mapStateToProps = (state) => ({
+	...state.player
+})
 
 export default Game;
