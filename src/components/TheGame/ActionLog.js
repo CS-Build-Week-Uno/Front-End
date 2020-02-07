@@ -38,18 +38,28 @@ color: blue;
 const ActionLog = () => {
 const [{gameState}, dispatch] = useStateValue();
 
+  console.log("GAMESTATE: ", gameState, "DISPATCH: ", dispatch);
+  useEffect(()=> {
+    getLocation(dispatch);
+  }, [dispatch]);
 
-useEffect(()=> {
-  getLocation(dispatch);
-}, [dispatch]);
-
-  return(
-    <Container>
-      <Title>Action Log Title</Title>
-      <Log>Hello</Log>
-    </Container>
-  )
-};
+    return(
+      <Container>
+        <Title>Action Log Title</Title>
+        <Log>
+          {/* {gameState.actionLog.map((x) =>{
+            <div>
+              <div>
+              <h3>{x.title}</h3>
+              <h4>{x.description}</h4>
+              </div>
+            </div>
+          }
+        )} */}
+        </Log>
+      </Container>
+    )
+  };
 
 
 

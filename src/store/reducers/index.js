@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from "redux";
 import playerReducer from "./playerReducer";
+import {loginReducer} from "./login";
 
 export const rootReducer = combineReducers({
-  player: playerReducer
+  player: playerReducer,
+  login: loginReducer,
 });
 
 const store = createStore(
