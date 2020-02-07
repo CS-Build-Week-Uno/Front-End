@@ -58,13 +58,6 @@ span{
   font-size: 12px;
   display: block;
   color: white;
-  max-width: 225px;
-  margin-top: 25px;
-  text-align: center;
-}
-.play{
-  font-family: 'Press Start 2P', cursive;
-  border: 3px solid black;
   padding: 10px 20px;
   text-decoration: none;
   color: black;
@@ -73,3 +66,62 @@ span{
   width: max-content;
   display: block;
 }
+
+.tile {
+  display: inline-flex;
+  margin: 0;
+  padding:0;
+  width: 63px;
+  height: 63px;
+}
+
+.e{
+  background-image: url('./components/TheGame/map/assets/e.png')
+}
+.n{
+  background-image: url('./components/TheGame/map/assets/n.png')
+}
+.ne{
+  background-image: url('./components/TheGame/map/assets/ne.png')
+}
+.ns{
+  background-image: url('./components/TheGame/map/assets/ns.png')
+}
+.nse{
+  background-image: url('./components/TheGame/map/assets/nse.png');
+  padding: 0;
+  margin: 0;
+  display:inline-flex;
+}
+.nw{
+  background-image: url('./components/TheGame/map/assets/nw.png')
+}
+.nwe{
+  background-image: url('./components/TheGame/map/assets/nwe.png')
+}
+.nws{
+  background-image: url('./components/TheGame/map/assets/nws.png')
+}
+.nwse{
+  background-image: url('./components/TheGame/map/assets/nwse.png')
+}
+.s{
+  background-image: url('./components/TheGame/map/assets/s.png')
+}
+.se{
+  background-image: url('./components/TheGame/map/assets/se.png')
+}
+.solid{
+  background-image: url('./components/TheGame/map/assets/solid.png')
+}
+.we{
+  background-image: url('./components/TheGame/map/assets/we.png')
+}
+.ws{
+  background-image: url('./components/TheGame/map/assets/ws.png')
+}
+.wse{
+  background-image: url('./components/TheGame/map/assets/wse.png')
+}
+
+

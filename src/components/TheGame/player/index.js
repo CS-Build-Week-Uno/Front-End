@@ -11,10 +11,14 @@ function Player(props) {
 				top: props.position[1],
 				left: props.position[0],
                 backgroundImage: `url(${bounceMove})`,
-                backgroundPosition: '0 0',
-                width: '30px',
-				height:'30px',
-				border:'1px solid white'
+				backgroundPosition: '0 0',
+				backgroundRepeat:'no-repeat',
+				backgroundSize:'cover',
+                width: '60px',
+				height:'60px',
+				margin:'auto',
+				// border:'1px solid white',
+				zIndex: '110'
 			}}
 		/>
 	);

@@ -7,6 +7,8 @@ import Player from "./player";
 
 import styled from "styled-components"
 
+import {tiles} from "../../data/maps/1"
+
 const MapContainer = styled.div`
 width:640px;
 height:640px:
@@ -15,8 +17,8 @@ grid-template-columns: repeat(10,64px);
 grid-template-rows: repeat(10,64px);
 grid-columns: 1/ 6;
 grid-rows: 1/6;
-background-color: black;
 `
+
 
 const Game = () => {
 	return (
@@ -29,18 +31,17 @@ const Game = () => {
 					width: "640px",
 					height: "640px",
 					margin: "2% auto",
-					color:'green',
 					
 				}}
 			>
 				<Player />
-				<GameMap />
+				<GameMap tiles ={tiles}/>
 			</MapContainer>
 
 			<div>
 				<Controller />
 				<ChatBox />
-				<ResponseBox />
+				{/* <ResponseBox /> */}
 			</div>
 		</>
 	);
