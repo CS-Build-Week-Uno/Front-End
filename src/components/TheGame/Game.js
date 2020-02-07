@@ -1,6 +1,6 @@
 import React from "react";
 import Controller from "./Controller";
-import ResponseBox from "./ResponseBox";
+import ActionLog from "./ActionLog";
 import GameMap from "./map";
 import ChatBox from "./ChatBox";
 import Player from "./player"
@@ -21,11 +21,6 @@ const Game = () => {
 				<GameMap />
 			</div>
 
-			<div>
-				<Controller />
-				<ChatBox />
-				<ResponseBox />
-			</div>
 		</>
 	);
 };

@@ -1,14 +1,13 @@
 import { createStore, combineReducers } from "redux";
-import playerReducer from './playerReducer'
+import playerReducer from "./playerReducer";
 
-const rootReducer = combineReducers({
-  player: playerReducer,
+export const rootReducer = combineReducers({
+  player: playerReducer
 });
 
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-)
-
-export default store
+export default store;
