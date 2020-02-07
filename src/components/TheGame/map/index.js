@@ -2,7 +2,7 @@ import React from "react";
 
 
 function MapTile(props) {
-	return <div className={`tile ${getTileSprite(props.tile)}`}></div>;
+	return <div className={`tile ${getTileSprite(props.tile)}`} style={{marginBottom:'-4px'}}/>;
 }
 
 function MapRow(props) {
