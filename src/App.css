@@ -91,7 +91,8 @@ span{
   background-image: url('./components/TheGame/map/assets/nse.png');
   padding: 0;
   margin: 0;
-  display:inline-flex;
+  background-size:cover;
+
 }
 .nw{
   background-image: url('./components/TheGame/map/assets/nw.png')
@@ -123,5 +124,7 @@ span{
 .wse{
   background-image: url('./components/TheGame/map/assets/wse.png')
 }
-
+.w{
+  background-image: url('./components/TheGame/map/assets/w.png');
+}
 
