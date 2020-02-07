@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
+import {useSelector} from 'react-redux'
 // import {useStateValue} from "../../utils/hooks/useStateValue";
 // import {getLocation} from "../../store/actions/gameAction";
 
@@ -33,10 +34,14 @@ padding: 10px;
 color: blue;
 `;
 
-
+const RoomInfo = styled.div`
+display: flex;
+flex-direction: column;
+`
 
 const ActionLog = () => {
 //const [{gameState}, dispatch] = useStateValue();
+const state = useSelector(state => state.player)
 
   //console.log("GAMESTATE: ", gameState, "DISPATCH: ", dispatch);
   // useEffect(()=> {
@@ -47,15 +52,10 @@ const ActionLog = () => {
       <Container>
         <Title>Action Log Title</Title>
         <Log>
-          {/* {gameState.actionLog.map((x) =>{
-            <div>
-              <div>
-              <h3>{x.title}</h3>
-              <h4>{x.description}</h4>
-              </div>
-            </div>
-          }
-        )} */}
+          <RoomInfo>
+    <h3>{state.title}</h3>
+    <p>{state.description}</p>
+    </RoomInfo>
         </Log>
       </Container>
     )
