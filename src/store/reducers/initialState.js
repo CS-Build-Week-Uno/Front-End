@@ -16,8 +16,9 @@ const initialState = {
   },
   gameState: {
     isLoading: false,
-    location:{uuid:"", name:"", title:"",  description: "", players:[]},
-    error:{},
+    location: { uuid: "", name: "", title: "", description: "", players: [] },
+    position: [0, 0], // of player
+    error: {},
     actionLog: [],
     chatBox: []
   }

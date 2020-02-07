@@ -1,15 +1,18 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import playerReducer from "./playerReducer";
-import {loginReducer} from "./login";
+import { loginReducer } from "./login";
 
-export const rootReducer = combineReducers({
-  player: playerReducer,
-  login: loginReducer,
-});
+export const rootReducer = combineReducers(
+  {
+    player: playerReducer,
+    login: loginReducer
+  }
+);
 
 const store = createStore(
   rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  applyMiddleware(thunk)
 );
 
 export default store;

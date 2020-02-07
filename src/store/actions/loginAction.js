@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { axiosWithAuth } from '../../utils/axiosWithAuth';
 
 export const LOGGING_IN_CHECK = "LOGGING_IN_CHECK";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -8,19 +9,23 @@ export const LOGOUT = "LOGOUT";
 export const CLEAR_ACTION_LOG = "CLEAR_ACTION_LOG";
 
 // dispatch action here for login
-export const login = (dispatch, user) => {
+export const login = user => {
+    return dispatch => {
+
     dispatch({type: LOGGING_IN_CHECK});
-    return axios
-    .post(`http://csbuildweek1.herokuapp.com/api/login`, user)
+    axios
+    .post(`http://csbuildweek1.herokuapp.com/api/login/`, user)
     .then(res => {
         dispatch({type: LOGIN_SUCCESS});
-        localStorage.setItem("token", /*WHERE EVER THE TOKEN LOCATION IS */);
+        console.log('LOGIN RESPONSE', res)
+        localStorage.setItem("token", res.data.key);
         return true;
     })
     .catch(err => {
-        console.log("Error: ", err.response);
-        dispatch({type:LOGIN_ERROR, payload:err.response.data})
+        console.log("Error: ", err);
+        dispatch({type:LOGIN_ERROR, payload:err.data})
     })
+}
 }
 
 export const logout = (dispatch) => {

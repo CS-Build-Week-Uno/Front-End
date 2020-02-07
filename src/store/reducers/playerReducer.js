@@ -1,46 +1,52 @@
-const initialState = {
-  // direction: 'S',
-  // alive: true,
-  position: [0, 0]
-};
+import initialState from './initialState'
+// const initialState = {
+//   // direction: 'S',
+//   // alive: true,
+//   position: [0, 0]
+// };
 
-const playerReducer = (state = initialState, action) => {
+const playerReducer = (state = initialState.gameState, action) => {
   console.log("playerReducer:  State: ", state, " action: ", action);
   switch (action.type) {
     case "MOVE_PLAYER":
       console.log("Move Player Payload: ", action.payload);
       return {
-        ...action.payload
+        ...state,
+        isLoading: true
       };
 
     case "MOVE_SUCCESS":
       return {
         ...state,
         isLoading: false,
-        location: { ...state.location, ...action.payload },
-        responseLog:
-          action.payload.description !==
-          state.responseLog[state.responseLog.length - 1].description
-            ? [
-                ...state.responseLog,
-                {
-                  title: action.payload.title,
-                  description: action.payload.description
-                }
-              ]
-            : state.responseLog
+        title: action.payload.title,
+        description: action.payload.description,
+        players: action.payload.players,
+        error_msg: action.payload.error_msg
+        // actionLog:
+        //   action.payload.description !==
+        //   state.actionLog[state.actionLog.length - 1].description
+        //     ? [
+        //         ...state.actionLog,
+        //         {
+        //           title: action.payload.title,
+        //           description: action.payload.description
+        //         }
+        //       ]
+        //     : state.responseLog
       };
     case "MOVE_ERROR":
       return {
         ...state,
-        error: action.payload,
-        responseLog: [
-          ...state.responseLog,
-          {
-            title: action.payload.title,
-            description: action.payload.description
-          }
-        ]
+        isLoading: false,
+        error_msg: action.payload
+        // actionLog: [
+        //   ...state.actionLog,
+        //   {
+        //     title: action.payload.title,
+        //     description: action.payload.description
+        //   }
+        // ]
       };
 
     default:
