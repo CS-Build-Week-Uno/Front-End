@@ -124,5 +124,7 @@ span{
 .wse{
   background-image: url('./components/TheGame/map/assets/wse.png')
 }
-
+.w{
+  background-image: url('./components/TheGame/map/assets/w.png');
+}
 
