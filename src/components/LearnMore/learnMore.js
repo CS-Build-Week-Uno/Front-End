@@ -93,7 +93,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "none",
     padding: theme.spacing(8, 0, 6)
   },
   heroButtons: {
@@ -138,7 +138,7 @@ export function LearnMore() {
               color="textPrimary"
               gutterBottom
             >
-              GETCHU GAME ON!!!
+              Presenting: The Team
             </Typography>
             <Typography
               variant="h5"
