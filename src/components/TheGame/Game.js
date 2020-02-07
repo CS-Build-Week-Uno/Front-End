@@ -1,9 +1,10 @@
 import React from "react";
 import Controller from "./Controller";
-import ResponseBox from "./ResponseBox";
+import ActionLog from "./ActionLog";
 import GameMap from "./map";
 import ChatBox from "./ChatBox";
 import Player from "./player";
+
 import styled from "styled-components"
 
 const MapContainer = styled.div`
@@ -43,6 +44,7 @@ const Game = () => {
 			</div>
 		</>
 	);
+
 };
 
 export default Game;

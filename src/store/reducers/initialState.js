@@ -1,12 +1,12 @@
 const initialState = {
-  loginState: {
-    isLoading: false,
-    isLoggedIn: false,
-    error: {}
-  },
   signUpState: {
     isLoading: false,
     isSignedUp: false,
+    error: {}
+  },
+  loginState: {
+    isLoading: false,
+    isLoggedIn: false,
     error: {}
   },
   mapState: {
@@ -16,8 +16,11 @@ const initialState = {
   },
   gameState: {
     isLoading: false,
-    location:{uuid:"", name:"", title:"",  description: "", players:[]},
-    error:{}
+    location: { uuid: "", name: "", title: "", description: "", players: [] },
+    position: [0, 0], // of player
+    error: {},
+    actionLog: [],
+    chatBox: []
   }
 };
 

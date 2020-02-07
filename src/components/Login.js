@@ -1,4 +1,5 @@
 import React from "react";
+import {useDispatch} from 'react-redux'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -7,6 +8,7 @@ import { login } from "../store/actions"
 
 const Login = props => {
   const [user, setUser] = useState({ username: "", password: "" });
+  const dispatch = useDispatch()
 
 
   function handleChange(e) {
@@ -15,19 +17,12 @@ const Login = props => {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    axios
-      .post(`https://csbuildweek1.herokuapp.com/api/login`, {
-        username: user.username,
-        password: user.password
-      })
-      .then(function(response) {
-        console.log(response);
-        props.history.push("/dashboard");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    e.preventDefault()
+    dispatch(login(user))
+
+    if (localStorage.getItem('token')) {
+      props.history.push('/dashboard')
+    }
 
     // login(dispatch, user).then(res => {
     //   if(res){

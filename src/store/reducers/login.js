@@ -1,4 +1,5 @@
-// import all of the login actions from ../actions';
+import {LOGGING_IN_CHECK, LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT, CLEAR_ACTION_LOG} from "../actions/loginAction";
+
 
 //set initial state
 const loginState = {
@@ -10,7 +11,7 @@ const loginState = {
 
 export const loginReducer = (state = loginState, { type, payload }) => {
   switch (type) {
-    case IS_LOGGING_IN:
+    case LOGGING_IN_CHECK:
       return {
         ...state,
         isLoading: true
