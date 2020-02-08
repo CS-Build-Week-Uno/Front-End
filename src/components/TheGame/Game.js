@@ -9,6 +9,7 @@ import styled from "styled-components";
 
 import {tiles} from "../../data/maps/1";
 import {connect} from 'react-redux';
+// import store from "../../store"
 
 const MapContainer = styled.div`
 width:640px;
@@ -22,6 +23,11 @@ grid-rows: 1/6;
 
 
 const Game = (props) => {
+
+	// store.dispatch({type:'ADD_TILES', payload:{
+	// 	tiles,
+	// }})
+
 	return (
 		<>
 			{/* Wrapper containing Map & Char */}
@@ -40,8 +46,8 @@ const Game = (props) => {
 			</MapContainer>
 
 			<div>
-				<Controller />
-				<ChatBox />
+				{/* <Controller />
+				<ChatBox /> */}
 				{/* <ResponseBox /> */}
 			</div>
 		</>

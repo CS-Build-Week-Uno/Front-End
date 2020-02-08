@@ -7,10 +7,10 @@ const Dashboard = () => {
     return (
       <Container>
         <Game/>
-        <TerminalStyles>
+        {/* <TerminalStyles>
           <ActionLog/>
           <ChatBox/>
-        </TerminalStyles>
+        </TerminalStyles> */}
       </Container>
       );
 
